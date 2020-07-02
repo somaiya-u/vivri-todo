@@ -4,11 +4,9 @@ import {getOpenTodos} from '../store/selectors';
 import Todo from './Todo';
 import {Col, Row} from 'react-bootstrap';
 
-class OpenTodos extends React.Component {
- 
+export class OpenTodos extends React.Component {
   render() {
     return (
-
         <div className="mt-3">
             <label>
                 <b>TODO</b>

@@ -4,7 +4,7 @@ import {getCompletedTodos} from '../store/selectors';
 import Todo from './Todo';
 import {Row,Col} from 'react-bootstrap';
 
-class CompletedTodos extends React.Component {
+export class CompletedTodos extends React.Component {
   render() {
     return (
         <div className="mt-3">

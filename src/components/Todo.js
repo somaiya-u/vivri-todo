@@ -5,7 +5,7 @@ import {Row,Col, Button, Form, Container} from 'react-bootstrap';
 
 
 
-class Todo extends React.Component {
+export class Todo extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -55,15 +55,15 @@ class Todo extends React.Component {
                         <Col md={8}>
                             <input type="checkbox" onChange={this.handleToggle} checked={this.props.item.completed}/>
                                 {
-                                    this.state.isEdit? <input className="todo-content" type="text" value={this.state.content} onChange={this.handleChange} />:
-                                        <span> {this.props.item.content} </span>
+                                this.state.isEdit? <input className="todo-content" type="text" value={this.state.content} onChange={this.handleChange} />:
+                                    <span>{this.props.item.content} </span>
                                 }   
                         </Col>
                         <Col md={4}>
                             <Row className="justify-content-around">
-                                {!this.state.isEdit && <Button variant="primary" onClick={this.handleEdit}>Edit</Button>}
-                                {this.state.isEdit && <Button variant="primary" onClick={(e) => this.handleUpdate(e)}>Save</Button>}
-                                <Button variant="primary" onClick={this.handleDelete} >Delete</Button>
+                                {!this.state.isEdit && <Button className="edit-btn" variant="primary" onClick={this.handleEdit}>Edit</Button>}
+                                {this.state.isEdit && <Button className="save-btn" variant="primary" onClick={(e) => this.handleUpdate(e)}>Save</Button>}
+                                <Button className="delete-btn" variant="primary" onClick={this.handleDelete} >Delete</Button>
                             </Row>           
                         </Col>
                     </Form.Row>
