@@ -27,7 +27,7 @@ export class AddTodo extends React.Component {
         <Form>
         <label><b>ADD ITEM</b></label>
         <Container>
-          <Row className="justify-content-md-center">
+          <Row className="justify-content-md-center mt-3">
             <Col md={10}>
               <Form.Control type="text" placeholder="Add New Todo"  onChange={e => this.updateInput(e.target.value)}
               value={this.state.input} />

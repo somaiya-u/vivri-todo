@@ -56,7 +56,7 @@ export class Todo extends React.Component {
                             <input type="checkbox" onChange={this.handleToggle} checked={this.props.item.completed}/>
                                 {
                                 this.state.isEdit? <input className="todo-content" type="text" value={this.state.content} onChange={this.handleChange} />:
-                                    <span>{this.props.item.content} </span>
+                                    <span className="ml-2"><b>{this.props.item.content} </b></span>
                                 }   
                         </Col>
                         <Col md={4}>
